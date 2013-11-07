@@ -29,8 +29,8 @@ public class INT067_Mapping extends AbstractTransformation {
     public static void main(String arg[]) throws FileNotFoundException, StreamTransformationException, IOException, ParserConfigurationException, SAXException {
         String folder, source, target;
         folder = "/Users/rassakhatsky/Desktop/";
-        source = "xml1 copy.xml";
-        target = "Datac.xml";
+        source = "xml1.xml";
+        target = "Data.xml";
 
         //test mapping
         INT067_Mapping mapping;

@@ -255,10 +255,10 @@ public class INT067SAXHandler extends DefaultHandler {
     //tag content
     @Override
     public void characters(char character[], int start, int length) throws SAXException {
-        for (int i = start; i < length; i++) {
+        StringBuilder tempCharacters = new StringBuilder();
+        tempCharacters.append("");
+        for (int i = start; i < length + start; i++) {
             char ch;
-            StringBuilder tempCharacters = new StringBuilder();
-            
             ch = character[i];
             if (ch >= '0' && ch <= '9'
                     || ch >= 'A' && ch <= 'Z'
@@ -272,18 +272,17 @@ public class INT067SAXHandler extends DefaultHandler {
                     || ch == '-' || ch == '_' || ch == '='
                     || ch == '[' || ch == ']' || ch == '{'
                     || ch == '}' || ch == '+' || ch == '.') {
-                
+
                 tempCharacters.append(ch);
             }
-            character = tempCharacters.toString().toCharArray();
         }
-        
-        
+        character = tempCharacters.toString().toCharArray();
+
         try {
             if (tagContent == null) {
-                tagContent = new String(character, start, length);
+                tagContent = tempCharacters.toString();
             } else {
-                tagContent += new String(character, start, length);
+                tagContent += tempCharacters.toString();
             }
         } catch (Exception ex) {
             throw new SAXException(ex);
