@@ -24,7 +24,6 @@ class MyOutputPayload extends OutputPayload {
         FileOutputStream fos = null;
         try {
             fos = new FileOutputStream(filename);
-
         } catch (FileNotFoundException ex) {
             Logger.getLogger(MyOutputPayload.class.getName()).log(Level.SEVERE, null, ex);
         }

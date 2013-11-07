@@ -14,7 +14,7 @@ public class TestMessage {
     public TransformationInput buildTransformationInput(String fileName) {
         MyTransformationInput ti = new MyTransformationInput();
         ti.setFileName(fileName);
-        InputPayload inputPayload = ti.getInputPayload();
+        //InputPayload inputPayload = ti.getInputPayload();
         return ti;
     }
 

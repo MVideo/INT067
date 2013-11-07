@@ -9,7 +9,7 @@ import com.sap.aii.mapping.api.*;
 public class MyTransformationInput extends TransformationInput {
 
     private String filename;
-    MyInputParameters inputParameters;
+    private MyInputParameters inputParameters;
 
     public void setFileName(String filename) {
         this.filename = filename;

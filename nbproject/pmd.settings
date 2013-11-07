@@ -1,0 +1,13 @@
+DefaultPackage
+CyclomaticComplexity
+MethodArgumentCouldBeFinal
+AvoidStringBufferField
+AvoidReassigningParameters
+DataflowAnomalyAnalysis
+LocalVariableCouldBeFinal
+NullAssignment
+UnusedImports
+BeanMembersShouldSerialize
+OnlyOneReturn
+AvoidDuplicateLiterals
+UnusedPrivateField

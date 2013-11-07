@@ -24,7 +24,6 @@ class MyInputPayload extends InputPayload {
         FileInputStream fis = null;
         try {
             fis = new FileInputStream(filename);
-            return fis;
         } catch (FileNotFoundException ex) {
             Logger.getLogger(MyInputPayload.class.getName()).log(Level.SEVERE, null, ex);
         }
